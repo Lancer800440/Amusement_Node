@@ -1,0 +1,17 @@
+# 測試api的頁面
+### 測試 JWT 登入 - 確定是正確的 
+# 自訂格式測試不同情況下api返回的東西 
+# 其他部分在開發時先把這功能關掉自訂一個登入假資料登入 
+# head和body中間要空一行 
+
+POST http://localhost:3002/login-jwt
+Content-Type: application/json
+
+{"email": "pigpig@zzz.com", "password": "123zzzZZZ"}
+
+### 測試 JWT 登入 - 確定是錯誤的 
+
+POST http://localhost:3002/login-jwt
+Content-Type: application/json
+
+{"email": "DrinkAllDay@iSpan.com", "password": "012345"}
